@@ -119,12 +119,14 @@ header h1 span {
     line-height: 2em;
 }
 
+.blogPosts div {
+    margin: 10px 0;
+}
+
 .blogPost {
     flex-basis: 48.7%;
     margin-bottom: 30px;
     padding-bottom: 30px;
-
-    border-bottom: 1px solid rgb(223, 223, 223);
 }
 
 .blogImg {
@@ -141,11 +143,12 @@ header h1 span {
 
 }
 
-.blogPost:nth-child(4) img, .blogPost:nth-child(5) img {
+.blogPost:nth-child(4) .blogImg > img, .blogPost:nth-child(5) .blogImg > img {
     height: 100%;
     max-width: 200%;
-    top: 0;
+    top: 0px;
     left: -200px;
+
 }
 
 .keyword, .blogDate {
@@ -168,5 +171,46 @@ header h1 span {
     text-transform: uppercase;
     background-color: white;
     border: 1px solid rgb(175, 175, 175);
+    transition-duration: 150ms;
 }
 
+.readMoreBtn:active, .readMoreBtn:focus {
+    outline: none;
+}
+
+.readMoreBtn:hover {
+    background-color: rgb(53, 171, 218);
+    color: #fff;
+    border-color: rgb(53, 171, 218);
+    transition-duration: 150ms;
+}
+
+.blogFooter {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    border-top: 1px solid rgb(223, 223, 223);
+}
+
+.comments {
+
+}
+
+.blogSocialIcons ul {
+    list-style: none;
+}
+
+.blogSocialIcons li {
+    display: inline;
+    padding: 0 6px;
+}
+
+.blogSocialIcons img {
+    width: 17px;
+    top: 5px;
+}
+
+footer {
+    border-top: 1px solid rgb(223, 223, 223);
+
+}
