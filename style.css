@@ -29,21 +29,17 @@ a {
     text-decoration: none;
     font-weight: 700;
     color: inherit;
-
     transition-duration: 200ms;
 }
 
 a:hover {
     color: rgb(53, 171, 218);
-    /* border-bottom: 2px solid grey; */
-    
-
+    /* font-style: italic; */
     transition-duration: 200ms;
 }
 
 nav {
     width: 100%;
-    height: 50px;
     padding: 15px 0;
     background-color: #fff;
     text-transform: uppercase;
@@ -55,7 +51,8 @@ nav a {
     text-decoration: none;
     color: #000;
 
-    padding: 20px 0;
+    padding: 20px 30px;
+    width: 100%;
 }
 
 nav ul {
@@ -72,7 +69,7 @@ nav ul li {
 nav ul li ul {
     display: none;
     position: absolute;
-    top: 0px;
+    margin-top: -3px;
     width: 190px;
     padding: 10px 0;
     background-color: #fff;
@@ -80,31 +77,51 @@ nav ul li ul {
     border-top: none;
 }
 
-nav ul li:hover ul {
-    display: block;
-    top: 50px    
-}
-
 nav ul li ul li {
     display: block;
-    width: 80%;
+    width: 100%;
     padding: 15px 0px;
     margin: 0 auto;
     border-bottom: 1px dotted rgb(202, 202, 202);
-
-}
-
-nav ul li ul li:last-child {
-    border-bottom: none;
 }
 
 nav ul li ul li a:hover {
     font-style: italic;
     border-bottom: none;
-    color: rgb(53, 171, 218);
-
+    
 }
 
+
+
+nav ul li ul li ul {
+    display: none;
+    position: absolute;
+    margin-top: -1px;
+    left: 189px;
+    width: 190px;
+    padding: 10px 0;
+    background-color: #fff;
+    border: 1px solid rgb(202, 202, 202);
+    border-left: none;
+}
+
+nav ul li:hover ul {
+    display: block;
+    top: 50px
+}
+
+nav ul li:hover ul ul {
+    display: none;
+}
+
+nav ul li ul li:hover ul {
+    display: block;
+    /* top: 50px */
+}
+
+nav ul li ul li:last-child {
+    border-bottom: none;
+}
 
 header h1{
     padding: 50px 0;
@@ -151,15 +168,63 @@ header h1 span, footer h1 span {
     flex-basis: 32%;
     height: 350px;
     overflow: hidden;
+
+    position: relative;
 }
 
-.menuBox img {
-    width: 120%;
+.menuBoxSize img {
+    width: 130%;
+}
+
+.menuBoxSize:nth-child(2) img {
+    width: 100%;
+    margin-top: -150px;
+}
+
+.menuBoxSize:nth-child(3) img {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0px;
 }
 
 .menuBox .menuBoxSize:nth-last-child(1) img {
     position: relative;
     top: -190px;
+}
+
+.menuBoxLabel {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    transition-duration: 100ms;
+    z-index: 1;
+}
+
+
+.menuBoxLabel h2, .menuBoxLabel p {
+    position: absolute;
+    line-height: 3em;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+}
+
+.menuBoxLabel h2 {
+    font-size: 2em;
+    letter-spacing: .1em;
+}
+
+.menuBoxLabel p {
+    font-family: var(--header-font);
+    font-size: .8em;
+}
+
+.menuBoxLabel:hover {
+    background-color: rgba(0, 0, 0, .5);
+    transition-duration: 100ms;
 }
 
 .blogPosts {
