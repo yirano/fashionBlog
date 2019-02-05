@@ -59,7 +59,6 @@ nav {
 .scrollTitle {
     display: none;
     visibility: hidden;
-    overflow-y: hidden;
     overflow: hidden;
     top: -120px;
 }
@@ -138,7 +137,6 @@ nav ul li ul {
     position: absolute;
     margin-top: -3px;
     width: 190px;
-    overflow-y: hidden;
     padding: 10px 0;
     background-color: #fff;
     border: 1px solid rgb(202, 202, 202);
@@ -431,4 +429,15 @@ footer h1 {
 
 footer p {
     font-size: .9em;
+    padding: 20px;
+
+}
+
+footer h2 {
+    font-size: 1.7em;
+    padding-top: 30px;
+}
+
+#header {
+    scroll-behavior: smooth;
 }
