@@ -52,13 +52,21 @@ nav {
     font-size: 2.3em;
     text-transform: none;
     left: 20px;
-    top: -120px;
-
+    /* top: -120px; */
     z-index: 99999;
+}
+
+.scrollTitle {
+    display: none;
+    visibility: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+    top: -120px;
 }
 
 .scrollDown {
     display: block;
+    visibility: visible;
     animation: scrollDown 500ms forwards;
 
 }
@@ -69,13 +77,19 @@ nav {
         opacity: 0;
     }
 
+    75% {
+        opacity: 1;
+    }
+
     100% {
         top: 2px;
+        opacity: 1;
     }
 }
 
 .scrollUp {
     display: block;
+    visibility: visible;
     animation: scrollUp 500ms forwards;
 }
 
@@ -124,6 +138,7 @@ nav ul li ul {
     position: absolute;
     margin-top: -3px;
     width: 190px;
+    overflow-y: hidden;
     padding: 10px 0;
     background-color: #fff;
     border: 1px solid rgb(202, 202, 202);
@@ -141,7 +156,6 @@ nav ul li ul li {
 nav ul li ul li a:hover {
     font-style: italic;
     border-bottom: none;
-
 }
 
 nav ul li ul li ul {
