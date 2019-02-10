@@ -541,14 +541,36 @@ footer h2 {
     z-index: -99998;
 }
 
+.rightBar li a{
+    padding: 0 20px;
+}
 
+.leftBar {
+    display: grid;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: auto;
+    padding: 10px;
+    background-color: #fff;
+    z-index: -99998;
+}
+
+.leftBar img {
+    display: block;
+    width: 12px;
+    padding: 20px 10px;
+
+}
 
 .bars ul li {
     display: inline;
+    padding: 0;
+    margin: 0;
 }
 
-.bars ul li a {
-    padding: 10px 25px;
-    margin: 0px 10px;
-
+.bars ul {
+    padding: 0;
 }
