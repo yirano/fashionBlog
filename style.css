@@ -49,7 +49,7 @@ nav {
     text-transform: uppercase;
     letter-spacing: .2em;
     border-bottom: 1px solid rgb(202, 202, 202);
-    z-index: 999;
+    z-index: 9999;
 }
 
 #scrollTitle {
@@ -63,9 +63,9 @@ nav {
 }
 
 .scrollTitle {
-    display: none;
-    visibility: hidden;
-    overflow: hidden;
+    /* display: none; */
+    /* visibility: hidden; */
+    /* overflow: hidden; */
     top: -120px;
 }
 
@@ -77,8 +77,8 @@ nav {
 }
 
 .scrollDown {
-    display: block;
-    visibility: visible;
+    /* display: block; */
+    /* visibility: visible; */
     animation: scrollDown 500ms forwards;
 }
 
@@ -555,14 +555,17 @@ footer h2 {
     width: auto;
     padding: 10px;
     background-color: #fff;
-    z-index: -99998;
 }
 
 .leftBar img {
     display: block;
     width: 12px;
     padding: 20px 10px;
+    
+}
 
+.bars {
+    z-index: 999;
 }
 
 .bars ul li {
@@ -573,4 +576,59 @@ footer h2 {
 
 .bars ul {
     padding: 0;
+}
+
+.rightBarShow {
+    animation: rightBarShow 500ms forwards;
+}
+
+@keyframes rightBarShow {
+    0% {
+        right: -50px;
+
+    }
+
+    100% {
+        right: 40px;
+    }
+}
+
+.rightBarHide {
+    animation: rightBarHide 500ms forwards;
+}
+
+@keyframes rightBarHide {
+    0% {
+        right: 40px;
+    }
+    100%{
+        right: -50px;
+    }
+}
+
+.leftBarShow {
+    animation: leftBarShow 500ms forwards;
+}
+
+@keyframes leftBarShow {
+    0% {
+        left: -50px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.leftBarHide {
+    animation: leftBarHide 500ms forwards;
+}
+
+@keyframes leftBarHide {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: -50px;
+    }
 }
