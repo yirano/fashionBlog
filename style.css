@@ -230,6 +230,33 @@ header h1 {
     letter-spacing: .2em;
 }
 
+.fadeHeader {
+    animation: fadeHeader 400ms forwards;
+}
+
+@keyframes fadeHeader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.showHeader {
+    animation: showHeader 350ms forwards;
+}
+
+@keyframes showHeader {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 header h1 span,
 footer h1 span {
     font-size: 1em;
