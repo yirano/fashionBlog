@@ -65,6 +65,47 @@
     }
 }
 
+@keyframes leftBarHide {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -50px;
+    }
+}
+
+@keyframes leftBarShow {
+    0% {
+        left: -50px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes rightBarHide {
+    0% {
+        right: 40px;
+    }
+
+    100% {
+        right: -50px;
+    }
+}
+
+@keyframes rightBarShow {
+    0% {
+        right: -50px;
+
+    }
+
+    100% {
+        right: 40px;
+    }
+}
+
 :root {
     --header-font: 'Poiret One', cursive;
     --body-font: 'Nanum Myeongjo', serif;
@@ -514,7 +555,9 @@ footer h2 {
     padding-top: 30px;
 }
 
-.bars, .scrollTitle, #scrollArrowHeader {
+.bars,
+.scrollTitle,
+#scrollArrowHeader {
     display: none;
     visibility: hidden;
 }
@@ -576,6 +619,10 @@ nav {
         width: 100%;
         margin-left: 0px;
     }
+    
+    .blogImg {
+        min-height: 500px;
+    }
 
     .bars,
     .scrollTitle,
@@ -584,121 +631,77 @@ nav {
         visibility: visible;
     }
 
-    .blogImg {
-        min-height: 500px;
+    .bars {
+        z-index: 99997;
     }
 
-    
-
-.rightBar {
-    position: fixed;
-    transform: rotate(-90deg);
-    transform-origin: right top 0;
-    margin: 0 auto;
-    text-align: center;
-    top: 0;
-    right: 40px;
-    padding: 10px 25px;
-    width: calc(45.5vw);
-    background-color: #fff;
-    z-index: -99998;
-}
-
-.rightBar li a {
-    padding: 0 20px;
-}
-
-.leftBar {
-    display: grid;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0px;
-    height: 100%;
-    width: auto;
-    padding: 10px;
-    background-color: #fff;
-}
-
-.leftBar img {
-    display: block;
-    width: 12px;
-    padding: 20px 10px;
-
-}
-
-.bars {
-    z-index: 999;
-}
-
-.bars ul li {
-    display: inline;
-    padding: 0;
-    margin: 0;
-}
-
-.bars ul {
-    padding: 0;
-}
-
-.rightBarShow {
-    animation: rightBarShow 500ms forwards;
-}
-
-@keyframes rightBarShow {
-    0% {
-        right: -50px;
+    .bars ul li {
 
     }
 
-    100% {
+    .bars ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;        
+    }
+
+    .rightBar {
+        position: fixed;
+        transform: rotate(-90deg);
+        transform-origin: right top 0;
+        margin: 0 auto;
+        text-align: center;
+        top: 0;
         right: 40px;
-    }
-}
-
-.rightBarHide {
-    animation: rightBarHide 500ms forwards;
-}
-
-@keyframes rightBarHide {
-    0% {
-        right: 40px;
+        padding: 10px 25px;
+        width: calc(45.5vw);
+        background-color: #fff;
+        z-index: -99998;
     }
 
-    100% {
-        right: -50px;
-    }
-}
-
-.leftBarShow {
-    animation: leftBarShow 500ms forwards;
-}
-
-@keyframes leftBarShow {
-    0% {
-        left: -50px;
+    .rightBar li a {
+        padding: 0 20px;
     }
 
-    100% {
-        left: 0px;
-    }
-}
-
-.leftBarHide {
-    animation: leftBarHide 500ms forwards;
-}
-
-@keyframes leftBarHide {
-    0% {
-        left: 0px;
+    .rightBarShow {
+        animation: rightBarShow 500ms forwards;
     }
 
-    100% {
-        left: -50px;
-    }
-}
 
-   
+    .rightBarHide {
+        animation: rightBarHide 500ms forwards;
+    }
+
+    .leftBar {
+        display: grid;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50px;
+        background-color: #fff;
+
+    }
+
+    .leftBar img {
+        display: block;
+        width: 14px;
+    }
+
+    .leftBar a {
+        padding: 10px;
+        
+    }
+
+    .leftBarShow {
+        animation: leftBarShow 500ms forwards;
+    }
+
+    .leftBarHide {
+        animation: leftBarHide 500ms forwards;
+    }
+
 }
 
 @media screen and (min-width: 1007px) {
@@ -706,7 +709,7 @@ nav {
     .menuBoxSize {
         position: relative;
         flex-basis: 32%;
-        height: 360px;
+        min-height: 340px;
         overflow: hidden;
     }
 
