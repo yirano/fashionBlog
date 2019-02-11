@@ -87,7 +87,7 @@
 
 @keyframes rightBarHide {
     0% {
-        right: 40px;
+        right: 0px;
     }
 
     100% {
@@ -102,7 +102,7 @@
     }
 
     100% {
-        right: 40px;
+        right: 0px;
     }
 }
 
@@ -635,10 +635,6 @@ nav {
         z-index: 99997;
     }
 
-    .bars ul li {
-
-    }
-
     .bars ul {
         list-style: none;
         padding: 0;
@@ -646,21 +642,20 @@ nav {
     }
 
     .rightBar {
+        display: grid;
+        align-items: center;
         position: fixed;
-        transform: rotate(-90deg);
-        transform-origin: right top 0;
-        margin: 0 auto;
-        text-align: center;
         top: 0;
-        right: 40px;
-        padding: 10px 25px;
-        width: calc(45.5vw);
+        right: 0;
+        height: 100%;
+        width: 50px;
         background-color: #fff;
-        z-index: -99998;
     }
-
-    .rightBar li a {
-        padding: 0 20px;
+    
+    .rightBar ul li {
+        transform: rotate(-90deg);
+        padding: 50px 0;
+        
     }
 
     .rightBarShow {
