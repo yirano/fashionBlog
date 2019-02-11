@@ -1,3 +1,70 @@
+@keyframes scrollDown {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+    
+    75% {
+        opacity: 1;
+    }
+    
+    100% {
+        top: 2px;
+        opacity: 1;
+    }
+}
+
+@keyframes scrollUp {
+    0% {
+        top: 2px;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+@keyframes scrollArrDown {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 12px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeHeader {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showHeader {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 :root {
     --header-font: 'Poiret One', cursive;
     --body-font: 'Nanum Myeongjo', serif;
@@ -5,6 +72,7 @@
 
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -69,21 +137,6 @@ nav {
     animation: scrollDown 500ms forwards;
 }
 
-@keyframes scrollDown {
-    0% {
-        top: -50px;
-        opacity: 0;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        top: 2px;
-        opacity: 1;
-    }
-}
 
 .scrollUp {
     display: block;
@@ -91,41 +144,11 @@ nav {
     animation: scrollUp 500ms forwards;
 }
 
-@keyframes scrollUp {
-    0% {
-        top: 2px;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        top: -50px;
-        opacity: 0;
-    }
-}
 
 .scrollArrDown {
     display: block;
     visibility: visible;
     animation: scrollArrDown 500ms forwards;
-}
-
-@keyframes scrollArrDown {
-    0% {
-        top: -50px;
-        opacity: 0;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        top: 12px;
-        opacity: 1;
-    }
 }
 
 nav h2 span {
@@ -183,8 +206,6 @@ nav ul li ul li ul {
     margin-top: -1px;
     left: 191px;
     width: 190px;
-    /* height: 0; */
-    /* overflow-y: wrap; */
     padding: 10px 0;
     background-color: #fff;
     border: 1px solid rgb(202, 202, 202);
@@ -225,28 +246,8 @@ header h1 {
     animation: fadeHeader 400ms forwards;
 }
 
-@keyframes fadeHeader {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
 .showHeader {
     animation: showHeader 350ms forwards;
-}
-
-@keyframes showHeader {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 header h1,
@@ -266,6 +267,7 @@ footer h1 span {
 .container {
     width: 95%;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .slider {
@@ -288,7 +290,8 @@ footer h1 span {
 .menuBoxSize {
     position: relative;
     flex-basis: 100%;
-    height: 340px;
+    max-height: 310px;
+    min-width: 290px;
     overflow: hidden;
     margin-bottom: 20px;    
 }
@@ -304,7 +307,7 @@ footer h1 span {
 
 .menuBoxSize:nth-child(3) img {
     position: relative;
-    top: -180px;
+    top: -120px;
     width: 100%;
     margin-left: 0px;
 }
@@ -375,17 +378,19 @@ footer h1 span {
 
 .blogPost img {
     position: relative;
-    max-width: 100%;
+    width: 150%;
     align-content: center;
     top: -100px;
+    left: -60px;
 
 }
 
 .blogImg {
     overflow: hidden;
     position: relative;
-    height: 340px;
+    max-height: 290px;
     margin-bottom: 30px;
+
 }
 
 .blogImg:hover:after {
@@ -558,6 +563,10 @@ nav {
 
     }
 
+    .blogImg {
+        min-height: 600px;
+    }
+
 }
 
 @media screen and (min-width: 901px) {
@@ -596,6 +605,14 @@ nav {
         display: block;
         visibility: visible;
     }
+
+    .blogImg {
+        min-height: 500px;
+        /* height: 200px; */
+        border: 2px solid red;
+    }
+
+    
 
 .rightBar {
     position: fixed;
@@ -734,7 +751,7 @@ nav {
     .blogImg {
         overflow: hidden;
         position: relative;
-        height: 550px;
+        /* height: 550px; */
         margin-bottom: 30px;
     }
 
