@@ -578,15 +578,19 @@ nav {
 
 
 .collMenu ul {
-    display: none;
+    /* display: none; */
+    display: block;
     position: fixed;
-    top: 40px;
+    top: 0px;
     width: 100%;
     background-color: #fff;
     list-style-type: none;
     padding: 0;
+    padding-top: 40px;
     text-align: center;
 
+    transform: translateY(-300px);
+    transition-duration: 300ms;
     z-index: 99999;
 }
 
@@ -599,16 +603,21 @@ nav {
 }
 
 #menuCheck, #menuCheck + label{
-    position: absolute;
+    position: fixed;
     top: 15px;
     left: 20px;
-    padding: 0;
+    padding: 10px 15px;
+    background-color:#fff;
 
     z-index: 9999999999999;
 }
 
 #menuCheck:checked ~ .menuBox{
    display: block;
+
+    transform: translateY(0px);
+    transition-duration: 300ms;
+
 }
 
 
