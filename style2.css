@@ -522,6 +522,81 @@ footer h2 {
     padding-top: 30px;
 }
 
+.bars, .scrollTitle, #scrollArrowHeader {
+    display: none;
+    visibility: hidden;
+}
+
+nav {
+    display: none;
+}
+
+
+/********* RESPONSIVE **********/
+
+@media screen and (min-width: 600px) {
+    .menuBoxSize:nth-child(2) img {
+        margin-top: -300px;
+    }
+
+    .menuBoxSize:nth-child(3) img {
+        margin-top: -100px;
+    }
+
+    .blogImg {
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+
+    .blogPost:nth-child(4) .blogImg>img,
+    .blogPost:nth-child(5) .blogImg>img {
+        height: auto;
+        width: 100%;
+        top: 20px;
+        left: 0px;
+
+    }
+
+}
+
+@media screen and (min-width: 901px) {
+    .container {
+        width: 80%;
+    }
+
+    nav {
+        display: block;
+        z-index: 99999;
+    }
+
+    .menuBoxSize img {
+        width: 130%;
+    }
+
+    .menuBoxSize:nth-child(1) img {
+        height: 100%;
+    }
+
+    .menuBoxSize:nth-child(2) img {
+        width: 100%;
+        margin-top: -150px;
+    }
+
+    .menuBoxSize:nth-child(3) img {
+        position: relative;
+        top: 0px;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .bars,
+    .scrollTitle,
+    #scrollArrowHeader {
+        display: block;
+        visibility: visible;
+    }
+
 .rightBar {
     position: fixed;
     transform: rotate(-90deg);
@@ -630,45 +705,6 @@ footer h2 {
     }
 }
 
-.bars, .scrollTitle, #scrollArrowHeader {
-    display: none;
-    visibility: hidden;
-}
-
-nav {
-    display: none;
-}
-
-/********* RESPONSIVE **********/
-
-@media screen and (min-width: 600px) {
-    .menuBoxSize:nth-child(2) img {
-        margin-top: -300px;
-    }
-
-    .menuBoxSize:nth-child(3) img {
-        margin-top: -100px;
-    }
-
-    .menuBoxSize, .blogImg {
-        /* height: 90vh; */
-    }
-
-    .blogImg {
-        display: flex;
-        align-content: center;
-        align-items: center;
-    }
-
-}
-
-@media screen and (min-width: 901px) {
-    .container {
-        width: 80%;
-    }
-    nav {
-        display: block;
-    }
    
 }
 
@@ -689,11 +725,29 @@ nav {
 
     .blogPost img {
         position: relative;
-        max-width: 100%;
+        /* max-width: 100%; */
         align-content: center;
-        top: -100px;
+        top: 0px;
 
     }
+
+    .blogImg {
+        overflow: hidden;
+        position: relative;
+        height: 550px;
+        margin-bottom: 30px;
+    }
+
+    .blogPost:nth-child(4) .blogImg>img,
+    .blogPost:nth-child(5) .blogImg>img {
+        /* height: 150%; */
+        width: 150%;
+        top: 0px;
+        left: -220px;
+
+    }
+
+
 }
 
 
