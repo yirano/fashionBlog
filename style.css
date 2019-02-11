@@ -1,9 +1,69 @@
-/* 
+@keyframes scrollDown {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+    
+    75% {
+        opacity: 1;
+    }
+    
+    100% {
+        top: 2px;
+        opacity: 1;
+    }
+}
 
-font-family: 'Poiret One', cursive;
-font-family: 'Nanum Myeongjo', serif; 
+@keyframes scrollUp {
+    0% {
+        top: 2px;
+    }
 
-*/
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+@keyframes scrollArrDown {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 12px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeHeader {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showHeader {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 :root {
     --header-font: 'Poiret One', cursive;
@@ -11,8 +71,8 @@ font-family: 'Nanum Myeongjo', serif;
 }
 
 * {
-    /* box-sizing: border-box; */
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -25,7 +85,6 @@ body {
     font-family: var(--body-font);
     font-size: 14px;
     margin: 0 auto;
-
     margin-bottom: 300px;
 
 }
@@ -59,7 +118,6 @@ nav {
     font-size: 2.3em;
     text-transform: none;
     left: 20px;
-    /* top: -120px; */
     z-index: 99999;
 }
 
@@ -78,21 +136,6 @@ nav {
     animation: scrollDown 500ms forwards;
 }
 
-@keyframes scrollDown {
-    0% {
-        top: -50px;
-        opacity: 0;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        top: 2px;
-        opacity: 1;
-    }
-}
 
 .scrollUp {
     display: block;
@@ -100,41 +143,11 @@ nav {
     animation: scrollUp 500ms forwards;
 }
 
-@keyframes scrollUp {
-    0% {
-        top: 2px;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        top: -50px;
-        opacity: 0;
-    }
-}
 
 .scrollArrDown {
     display: block;
     visibility: visible;
     animation: scrollArrDown 500ms forwards;
-}
-
-@keyframes scrollArrDown {
-    0% {
-        top: -50px;
-        opacity: 0;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        top: 12px;
-        opacity: 1;
-    }
 }
 
 nav h2 span {
@@ -192,8 +205,6 @@ nav ul li ul li ul {
     margin-top: -1px;
     left: 191px;
     width: 190px;
-    /* height: 0; */
-    /* overflow-y: wrap; */
     padding: 10px 0;
     background-color: #fff;
     border: 1px solid rgb(202, 202, 202);
@@ -234,31 +245,13 @@ header h1 {
     animation: fadeHeader 400ms forwards;
 }
 
-@keyframes fadeHeader {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 .showHeader {
     animation: showHeader 350ms forwards;
 }
 
-@keyframes showHeader {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-header h1, footer h1 {
-    font-size: 12vw;
+header h1,
+footer h1 {
+    font-size: 11vw;
 }
 
 header h1 span,
@@ -271,36 +264,35 @@ footer h1 span {
 /********* CONTAINER **********/
 
 .container {
-    /* width: 1150px; */
     width: 95%;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .slider {
-    /* height: 90vh; */
-    /* margin: 5px auto; */
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .slider img {
     position: relative;
     width: 100%;
-    top: -40px;
 }
 
 .menuBox {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-basis: 100%;
 }
 
 .menuBoxSize {
     position: relative;
-    flex-basis: 32%;
-    height: 410px;
+    flex-basis: 100%;
+    max-height: 310px;
+    min-width: 290px;
     overflow: hidden;
-
-    position: relative;
+    margin-bottom: 20px;    
 }
 
 .menuBoxSize img {
@@ -314,11 +306,10 @@ footer h1 span {
 
 .menuBoxSize:nth-child(3) img {
     position: relative;
-    top: -180px;
+    top: -120px;
     width: 100%;
     margin-left: 0px;
 }
-
 
 .menuBoxLabel {
     position: absolute;
@@ -339,6 +330,7 @@ footer h1 span {
     width: 95%;
     border: 1px solid #fff;
 }
+
 .menuBoxLabel h2,
 .menuBoxLabel p {
     position: absolute;
@@ -378,24 +370,25 @@ footer h1 span {
 }
 
 .blogPost {
-    flex-basis: 48.7%;
+    flex-basis: 100%;
     margin-bottom: 30px;
     padding-bottom: 30px;
 }
 
 .blogPost img {
     position: relative;
-    max-width: 100%;
+    width: 100%;
     align-content: center;
     top: -100px;
-    
+
 }
 
 .blogImg {
     overflow: hidden;
     position: relative;
-    height: 550px;
+    max-height: 290px;
     margin-bottom: 30px;
+
 }
 
 .blogImg:hover:after {
@@ -407,17 +400,6 @@ footer h1 span {
     width: 95%;
     height: 95%;
     border: 1px solid #fff;
-}
-
-
-
-.blogPost:nth-child(4) .blogImg>img,
-.blogPost:nth-child(5) .blogImg>img {
-    height: 100%;
-    max-width: 200%;
-    top: 0px;
-    left: -200px;
-
 }
 
 .keyword,
@@ -532,6 +514,82 @@ footer h2 {
     padding-top: 30px;
 }
 
+.bars, .scrollTitle, #scrollArrowHeader {
+    display: none;
+    visibility: hidden;
+}
+
+nav {
+    display: none;
+}
+
+
+/********* RESPONSIVE **********/
+
+@media screen and (min-width: 600px) {
+    .menuBoxSize:nth-child(2) img {
+        margin-top: -300px;
+    }
+
+    .menuBoxSize:nth-child(3) img {
+        margin-top: -100px;
+    }
+
+    .blogImg {
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+
+    .blogImg {
+        min-height: 600px;
+    }
+
+}
+
+@media screen and (min-width: 901px) {
+    .container {
+        width: 80%;
+    }
+
+    nav {
+        display: block;
+        z-index: 99999;
+    }
+
+    .menuBoxSize img {
+        width: 130%;
+    }
+
+    .menuBoxSize:nth-child(1) img {
+        height: 100%;
+    }
+
+    .menuBoxSize:nth-child(2) img {
+        width: 100%;
+        margin-top: -150px;
+    }
+
+    .menuBoxSize:nth-child(3) img {
+        position: relative;
+        top: 0px;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .bars,
+    .scrollTitle,
+    #scrollArrowHeader {
+        display: block;
+        visibility: visible;
+    }
+
+    .blogImg {
+        min-height: 500px;
+    }
+
+    
+
 .rightBar {
     position: fixed;
     transform: rotate(-90deg);
@@ -546,7 +604,7 @@ footer h2 {
     z-index: -99998;
 }
 
-.rightBar li a{
+.rightBar li a {
     padding: 0 20px;
 }
 
@@ -566,7 +624,7 @@ footer h2 {
     display: block;
     width: 12px;
     padding: 20px 10px;
-    
+
 }
 
 .bars {
@@ -606,7 +664,8 @@ footer h2 {
     0% {
         right: 40px;
     }
-    100%{
+
+    100% {
         right: -50px;
     }
 }
@@ -633,82 +692,44 @@ footer h2 {
     0% {
         left: 0px;
     }
+
     100% {
         left: -50px;
     }
 }
 
-/********* RESPONSIVE **********/
+   
+}
 
-
-
-@media screen and (min-width: 400px ) and (max-width: 700px) {
-    .scrollTitle, #scrollArrowHeader, .bars {
-        display: none;
-        visibility: hidden;
-    }
-
-    .slider img {
-        top: 0;
-    }
-
-    .slider {
-        margin-bottom: 40px;
-    }
-
-    .menuBox > div {
-        margin-bottom: 40px;
-    }
+@media screen and (min-width: 1007px) {
 
     .menuBoxSize {
-        flex-basis: 100%;
-    }
-
-    }
-
-    .menuBoxSize:nth-child(2) img {
-        width: 100%;
-        margin-top: -50%;
-    }
-
-    .menuBoxSize:nth-child(3) img {
         position: relative;
-        top: -50%;
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    .blogPost {
-        flex-basis: 100%;
-    }
-
-    .blogImg {
+        flex-basis: 32%;
         height: 360px;
+        overflow: hidden;
     }
-
-    .blogImg:hover:after {
-        content: '';
-        width: 94%;
-        height: 94%;
-    }
-
-    .blogPost:nth-child(4) .blogImg>img,
-    .blogPost:nth-child(5) .blogImg>img {
-        height: 100%;
-        max-width: 200%;
-        top: 0px;
-        left: -130px;
-
-    }
-
-
-
-@media screen and (min-width: 1007px) {}
-
-@media screen and (min-width: 640px)  {
 
     .blogPost {
         flex-basis: 48.7%;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
     }
 
+    .blogPost img {
+        position: relative;
+        align-content: center;
+        top: 0px;
+
+    }
+
+    .blogImg {
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+
 }
+
+
