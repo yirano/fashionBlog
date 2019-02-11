@@ -400,10 +400,12 @@ footer h1 span {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 auto;
     margin-top: 50px;
 
     text-align: center;
     line-height: 2em;
+
 }
 
 .blogPosts div {
@@ -414,6 +416,7 @@ footer h1 span {
     flex-basis: 100%;
     margin-bottom: 30px;
     padding-bottom: 30px;
+
 }
 
 .blogPost img {
@@ -427,7 +430,9 @@ footer h1 span {
 .blogImg {
     overflow: hidden;
     position: relative;
-    max-height: 290px;
+    max-height: 320px;
+    min-width: 320px;
+
     margin-bottom: 30px;
 
 }
@@ -484,10 +489,15 @@ footer h1 span {
     justify-content: space-between;
     height: 50px;
     border-top: 1px solid rgb(223, 223, 223);
+
+
 }
 
 .blogSocialIcons ul {
     list-style: none;
+    width: 140px;
+    padding: 0;
+
 }
 
 .blogSocialIcons li {
@@ -496,7 +506,7 @@ footer h1 span {
 }
 
 .blogSocialIcons img {
-    width: 17px;
+    width: 14px;
     top: 5px;
 }
 
