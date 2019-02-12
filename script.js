@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     var firstSub = document.querySelector('.subA');
 
-    firstSub.addEventListener('mouseover', function(){
+    firstSub.addEventListener('mouseover', function () {
         console.log("entered");
     });
 
