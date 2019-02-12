@@ -272,7 +272,7 @@ nav ul li ul li:last-child {
 
 header {
     width: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
 }
 
 header h1 {
@@ -796,6 +796,38 @@ nav {
 
 /********* BLOG.HTML **********/
 
+.blogContainer {
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.singleBlog {
+    line-height: 30px;
+}
+
+.singleBlog img {
+    width: 100%;
+}
+
+.singleBlog>.blogImg:hover:after {
+    border: none;
+}
+
+.blogSocialIcons img {
+    width: 12px;
+}
+
+.blogContainer > .blogPostDesc {
+    padding: 20px;
+    text-align: center;
+
+}
+
+.blogPost {
+    text-align: justify;
+} 
+
+/* 
 .blogContainer
 {
     display: grid;
@@ -811,20 +843,12 @@ nav {
 {
     width: 100%;
 }
-.singleBlog>.blogImg:hover:after
-{
-    border: none;
-}
+
 .blogPostDesc
 {
     grid-column: 1/3;
     padding: 60px;
     text-align: center;
-
-}
-.blogContainer .blogTitle
-{
-    font-size: 2em;
 
 }
 .blogContainer > .blogSidebar
@@ -834,7 +858,7 @@ nav {
       padding: 0 40px;
       border-left: 1px solid #ccc;
 }
-
+ */
 
 
 
