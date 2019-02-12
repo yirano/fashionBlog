@@ -272,6 +272,7 @@ nav ul li ul li:last-child {
 
 header {
     width: 100%;
+    padding-bottom: 100px;
 }
 
 header h1 {
@@ -292,7 +293,7 @@ header h1 {
 
 header h1,
 footer h1 {
-    font-size: 11vw;
+    font-size: 9vw;
 }
 
 header h1 span,
@@ -580,7 +581,7 @@ nav {
 .collMenu ul {
     /* display: none; */
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0px;
     width: 100%;
     background-color: #fff;
@@ -602,20 +603,16 @@ nav {
     display: none;
 }
 
-#menuCheck, #menuCheck + label{
-
-}
-
 #menuCheck:checked ~ .menuBox{
    display: block;
 
-    transform: translateY(0px);
+    transform: translateY(10px);
     transition-duration: 400ms;
 
 }
 
 .collMenuBar {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     padding: 20px 30px;
@@ -624,7 +621,9 @@ nav {
     text-align: right;
 
     z-index: 99999999;
+
 }
+
 
 
 /********* RESPONSIVE **********/
@@ -793,5 +792,49 @@ nav {
 
 
 }
+
+
+/********* BLOG.HTML **********/
+
+.blogContainer
+{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 0 140px;    
+}
+.blogContainer > .singleBlog {
+    grid-column: 1/2;
+  
+}
+
+.singleBlog > .blogImg > img 
+{
+    width: 100%;
+}
+.singleBlog>.blogImg:hover:after
+{
+    border: none;
+}
+.blogPostDesc
+{
+    grid-column: 1/3;
+    padding: 60px;
+    text-align: center;
+
+}
+.blogContainer .blogTitle
+{
+    font-size: 2em;
+
+}
+.blogContainer > .blogSidebar
+{
+    grid-column: 2/3;
+    justify-self: center;
+      padding: 0 40px;
+      border-left: 1px solid #ccc;
+}
+
+
 
 
