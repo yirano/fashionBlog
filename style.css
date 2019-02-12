@@ -580,7 +580,7 @@ nav {
 .collMenu ul {
     /* display: none; */
     display: block;
-    position: fixed;
+    position: absolute;
     top: 0px;
     width: 100%;
     background-color: #fff;
@@ -590,7 +590,7 @@ nav {
     text-align: center;
 
     transform: translateY(-300px);
-    transition-duration: 300ms;
+    transition-duration: 400ms;
     z-index: 99999;
 }
 
@@ -603,24 +603,28 @@ nav {
 }
 
 #menuCheck, #menuCheck + label{
-    position: fixed;
-    top: 15px;
-    left: 20px;
-    padding: 10px 15px;
-    background-color:#fff;
 
-    z-index: 9999999999999;
 }
 
 #menuCheck:checked ~ .menuBox{
    display: block;
 
     transform: translateY(0px);
-    transition-duration: 300ms;
+    transition-duration: 400ms;
 
 }
 
+.collMenuBar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 20px 30px;
+    background-color:#fff;
+    width: 100%;
+    text-align: right;
 
+    z-index: 99999999;
+}
 
 
 /********* RESPONSIVE **********/
@@ -654,6 +658,10 @@ nav {
     nav {
         display: block;
         z-index: 99999;
+    }
+
+    .collMenu {
+        display: none;
     }
 
     .menuBoxSize img {
