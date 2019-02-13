@@ -403,7 +403,7 @@ footer h1 span {
     flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 50px;
-
+    font-size: 16px;
     text-align: center;
     line-height: 2em;
 
@@ -603,7 +603,7 @@ nav {
     display: none;
 }
 
-#menuCheck:checked~.menuBox {
+#menuCheck:checked~.collMenuBox {
     display: block;
 
     transform: translateY(10px);
@@ -626,6 +626,108 @@ nav {
 
 
 
+
+/********* BLOG.HTML **********/
+
+.blogContainer {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 16px;
+    
+}
+
+.blogContainer {
+    line-height: 30px;
+}
+
+.blogContainer img {
+    width: 100%;
+}
+
+.singleBlog .blogImg:hover:after {
+    border: none;
+}
+
+.blogSocialIcons img {
+    width: 12px;
+}
+
+.blogContainer .blogPostDesc {
+    padding: 20px;
+    text-align: center;
+}
+
+.blogContainer .blogPost {
+    text-align: justify;
+    padding-bottom: 202px;
+}
+
+.blogContainer .blogPost::first-letter {
+    position: relative;
+    font-size: 5em;
+    font-weight: 700;
+    float: left;
+    padding-right: 10px;
+    line-height: 80px;
+}
+
+.blogContainer ul {
+    margin: 0 auto;
+
+}
+
+.blogContainer .blogFooter {
+    display: block;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+.blogContainer .borderPattern {
+    margin-bottom: 30px;
+}
+
+.authorProfile {
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.profileImg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileAuthor p {
+    font-size: .7em;
+}
+
+.authorSocialIcons ul {
+    display: inline;
+    list-style: none;
+    padding: 30px;
+    font-size: .6em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.authorSocialIcons ul li {
+    display: inline;
+    padding: 10px;
+
+}
+
+
 /********* RESPONSIVE **********/
 
 @media screen and (min-width: 600px) {
@@ -646,6 +748,17 @@ nav {
     .blogImg {
         min-height: 600px;
     }
+
+    /*  BLOG.HTML */
+
+    .blogContainer {
+        padding: 0 300px;
+    }
+
+    .blogContainer h1{
+        font-size: 4em;
+        line-height: 1em;
+    }   
 
 }
 
@@ -769,19 +882,15 @@ nav {
         font-size: 6vw;
     }
 
-    .container {
-        padding: 100px;
-    }
 
     .menuBoxSize {
         position: relative;
-        flex-basis: 32%;
-        max-height: 360px;
+        flex-basis: 33%;
         overflow: hidden;
     }
 
     .blogPost {
-        flex-basis: 48.7%;
+        flex-basis: 47.5%;
         margin-bottom: 30px;
         padding-bottom: 30px;
     }
@@ -803,127 +912,12 @@ nav {
 
 @media screen and (min-width: 1655px) {
     .menuBoxSize {
-        min-height: 400px;
-        max-height: 560px;
+        max-height: 460px;
+        flex-basis: 33%;
     }
 
     .blogImg {
-        min-height: 900px;
+        min-height: 700px;
     }
 }
 
-
-/********* BLOG.HTML **********/
-
-.blogContainer {
-    width: 100%;
-    padding: 10px 30px;
-}
-
-.blogContainer {
-    line-height: 30px;
-}
-
-.blogContainer img {
-    width: 100%;
-}
-
-.singleBlog .blogImg:hover:after {
-    border: none;
-}
-
-.blogSocialIcons img {
-    width: 12px;
-}
-
-.blogContainer .blogPostDesc {
-    padding: 20px;
-    text-align: center;
-}
-
-.blogContainer .blogPost {
-    text-align: justify;
-    padding-bottom: 202px;
-}
-
-.blogContainer .blogPost::first-letter {
-    position: relative;
-    font-size: 5em;
-    font-weight: 700;
-    float: left;
-    padding-right: 10px;
-    line-height: 80px;
-}
-
-.blogContainer ul {
-    margin: 0 auto;
-
-}
-
-.blogContainer .blogFooter {
-    display: block;
-    width: 100%;
-    height: 70px;
-    text-align: center;
-
-    margin-bottom: 30px;
-    padding-top: 20px;
-}
-
-.blogContainer .borderPattern {
-    margin-bottom: 30px;
-}
-
-.authorProfile {
-    display: flex;
-    flex-basis: 50%;
-    padding: 0 30px;
-    font-size: 1.5em;
-    text-align: center;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.profileImg {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.profileAuthor p {
-    font-size: .7em;
-}
-
-/* 
-.blogContainer
-{
-    display: grid;
-    grid-template-columns: 60% 40%;
-    padding: 0 140px;    
-}
-.blogContainer > .singleBlog {
-    grid-column: 1/2;
-  
-}
-
-.singleBlog > .blogImg > img 
-{
-    width: 100%;
-}
-
-.blogPostDesc
-{
-    grid-column: 1/3;
-    padding: 60px;
-    text-align: center;
-
-}
-.blogContainer > .blogSidebar
-{
-    grid-column: 2/3;
-    justify-self: center;
-      padding: 0 40px;
-      border-left: 1px solid #ccc;
-}
- */
