@@ -787,16 +787,12 @@ nav {
         position: relative;
         align-content: center;
         top: 0px;
-        /* min-height: 00px; */
-
     }
 
     .blogImg {
         overflow: hidden;
         position: relative;
         margin-bottom: 30px;
-        /* min-height: 900px; */
-        
     }
 
 
@@ -844,6 +840,7 @@ nav {
 
 .blogContainer > .blogPost {
     text-align: justify;
+    padding-bottom: 202px;
 } 
 
 .blogContainer > .blogPost::first-letter {
@@ -855,8 +852,25 @@ nav {
     line-height: 80px;
 }
 
-.blogContainer > .blogFooter {
+.singleBlog > .blogFooter {
     display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+.singleBlog > .blogFooter > .blogSocialIcons > ul{
+    margin: 0 auto;
+
+}
+
+.singleBlog > .blogPost::first-letter {
+    font-size: 5em;
+    font-weight: 900;
+    float: left;
+    line-height: 80px;
+    padding-right: 15px;
+
 }
 
 
